@@ -1,17 +1,19 @@
 import React from "react";
 
-import { Card, CardDescription, CardHeader } from "@/components/ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import SignUpForm from "./components/sign-up-form";
 
 const SignUp = () => {
   return (
-    <section className="flex h-screen w-screen items-center justify-center">
-      <Card className="w-full max-w-md ">
+    <section className="flex h-screen w-screen items-center justify-center px-5">
+      <Card className="w-full max-w-lg">
         <CardHeader>
-          <span className="text-xl font-semibold">Tela de Cadastro</span>
+          <CardTitle>Cria sua conta</CardTitle>
+          <CardDescription>
+            Insira as suas informações para realizar o cadastro
+          </CardDescription>
         </CardHeader>
-        <CardDescription>
-          <p>Crie sua conta para começar a usar o aplicativo.</p>
-        </CardDescription>
+        <SignUpForm />
       </Card>
     </section>
   );
